@@ -2,10 +2,10 @@ services:
   - type: web
     name: phishing-detector
     runtime: python
+    pythonVersion: 3.10
     buildCommand: "pip install -r requirements.txt"
     startCommand: "gunicorn app:app"
     region: oregon
     plan: free
     branch: main
     repo: https://github.com/Srujanalanka/phishing-detector-v2
-
